@@ -1,0 +1,24 @@
+OOP : Java, C++, C#
+AOP : AspectJ
+
+AOP(Aspect Oriented Programming) : 코드 삽입
+여러 객체에 공통으로 적용할 수 있는 기능을 분리함으로써 재사용을 높여주는 프로그램 기법
+
+업로드 로직을 포함하는 기능 : 핵심 기능 (Core Concern) / 입금, 출금, 이체, ...
+핵심 기능을 도와주는 부가기능 : (Cross-cutting Concern) / 로그인, 보안, 감사, ...
+
+Aspect?
+부가기능을 정의한 코드인 어드바이스 + 어드바이스를 어디에 적용할 것인지를 결정해주는 포인트컷을 합친 개념
+advice + pointcut ==> Aspect
+
+Target : 핵심기능을 담고 있는 대상(모듈)
+Advice : Target에 제공할 부가기능을 담고 있는 모듈
+join point : Advice가 적용될 수 있는 위치
+pointcut : Advice를 적용할 Target에 메서드를 선별하는 표현식
+    "oracleDAO.selectAll()를 조회할 때만 적용해라"
+weaving : pointcut에 의해서 결정된 Target의 join point에 부가기능을 삽입하는 과정
+
+AOP를 적용하는 방법
+1. 컴파일 시점에 코드를 핵심기능에 공통기능을 추가하는 방법
+2. 클래스 로딩시 바이트 코드에 공통기능을 추가하는 방법
+3. 런타임시에 프록시 객체를 생성해서 공통기능을 추가하는 방법 (spring)

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--대행자-->
+    <bean id="cs" class="org.springframework.aop.framework.ProxyFactoryBean">
+        <property name="target" ref="imple"></property>
+        <property name="interceptorNames">
+            <list>
+                <value>hijack</value>
+                <value>nt</value>
+            </list>
+        </property>
+    </bean>
+
+    <bean id="nt" class="kr.co.jhta.app.NowTime"></bean>
+
+    <bean id="hijack" class="kr.co.jhta.app.HijackBeforeAdvice"></bean>
+
+    <bean id="imple" class="kr.co.jhta.app.CustomerServiceImple">
+        <property name="name" value="루피"></property>
+        <property name="email" value="loopy@email.com"></property>
+    </bean>
+
+
+</beans>

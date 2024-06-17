@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+    <!--setter : p-->
+    <!--xmlns:p="http://www.springframework.org/schema/p"-->
+    <!--생성자 : c-->
+    <!--xmlns:c="http://www.springframework.org/schema/c"-->
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:c="http://www.springframework.org/schema/c"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="gun" class="kr.co.jhta.app.Gun">
+        <constructor-arg name="bullet" value="3"></constructor-arg>
+    </bean>
+
+    <!--생성자 : c-->
+    <bean id="stunGun" class="kr.co.jhta.app.StunGun" c:battery="100">
+    <!--setter : p-->
+<!--    <bean id="stunGun" class="kr.co.jhta.app.StunGun" p:battery="100">-->
+    </bean>
+
+    <bean id="slingShot" class="kr.co.jhta.app.SlingShot">
+        <constructor-arg name="bead" value="3"></constructor-arg>
+    </bean>
+
+    <bean id="ch" class="kr.co.jhta.app.Police" c:w-ref="stunGun" c:hp="100">
+    </bean>
+
+</beans>
