@@ -5,20 +5,18 @@
        xmlns:aop="http://www.springframework.org/schema/aop"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/aop https://www.springframework.org/schema/aop/spring-aop.xsd">
 
-    <bean id="cs" class="kr.co.jhta.app.CustomerServiceImple">
-        <property name="name" value="루피"></property>
-        <property name="email" value="loopy@email.com"></property>
+    <bean id="dao" class="kr.co.jhta.app.dao.EmpMySQLDAO"></bean>
+
+    <bean id="service" class="kr.co.jhta.app.service.EmpService">
+        <property name="dao" ref="dao"></property>
     </bean>
 
-    <bean id="ct" class="kr.co.jhta.app.CheckTime2"></bean>
+    <bean id="ct" class="kr.co.jhta.app.util.CheckTime"></bean>
 
-    <!-- AOP 설정 -->
     <aop:config>
-        <!-- 새로운 aspect 지정 -->
         <aop:aspect id="checkAspect" ref="ct">
-            <!-- 정확히 어디에 지정할 것인지 -->
-            <aop:pointcut id="checkPoint" expression="execution(public * printEmail(..))"/>
-            <aop:around method="logAround" pointcut-ref="checkPoint"></aop:around>
+            <aop:pointcut id="checkPoint" expression="execution(public * readAll(..))"/>
+            <aop:around method="logAround"  pointcut-ref="checkPoint"></aop:around>
         </aop:aspect>
     </aop:config>
 
