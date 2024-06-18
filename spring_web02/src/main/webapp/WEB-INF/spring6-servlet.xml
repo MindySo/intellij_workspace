@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="beanNameUrlHandlerMapping" class="org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping"></bean>
+
+    <bean id="/hello.do" class="kr.co.jhta.web.spring_web02.HelloController"></bean>
+    <bean id="/greeting.do" class="kr.co.jhta.web.spring_web02.HelloImpleController">
+        <property name="name" value="홍길동"></property>
+    </bean>
+
+    <bean id="internalResourceViewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="prefix" value="/views/"></property>
+        <property name="suffix" value=".jsp"></property>
+    </bean>
+
+</beans>
