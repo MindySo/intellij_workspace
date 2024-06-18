@@ -9,8 +9,8 @@
 </h1>
 <br/>
 <a href="hello-servlet">Hello Servlet</a>
-<a href="hello.do">hello</a>
-<a href="time.do">현재시간</a>
-<a href="hikr.do">안녕한국</a>
+<a href="show2.do">show</a>
+<a href="index.do">index</a>
+<a href="menu.do">menu</a>
 </body>
 </html>
