@@ -5,10 +5,7 @@ import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
@@ -68,5 +65,13 @@ public class HomeController {
         System.out.println("home3() method called");
         return "data/home3";
     }
+
+    @RequestMapping("/hello.do")
+    @ResponseBody
+    public String ggg(){
+        // ResponseBody : 뷰의 이름이 아니라 출력결과를 사용자 브라우저에 직접 보내기
+        return "<html><body><h1>Hello World!</h1></body></html>";
+    }
+
 
 }

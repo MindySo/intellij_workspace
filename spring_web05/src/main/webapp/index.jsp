@@ -15,6 +15,7 @@
 <a href="doTest2.do">doTest2.do</a>
 <a href="doGet1.do">doGet1.do</a>
 <a href="doGet2.do">doGet2.do</a>
-<a href="home3.do">doGet2.do</a>
+<a href="home3.do">home3.do</a>
+<a href="hello.do">hello.do</a>
 </body>
 </html>
