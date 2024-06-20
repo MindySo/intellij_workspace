@@ -18,8 +18,10 @@
         <h5>파일 다중선택 가능</h5>
         <input type="file" name="uploadfile" multiple>
 
+        <%--
         <h5>파일 한개씩 선택</h5>
         <input type="file" name="uploadfile">
+        --%>
 
         <input type="submit" value="전송">
     </form>

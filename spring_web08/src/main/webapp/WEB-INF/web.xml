@@ -15,7 +15,11 @@
             </param-value>
         </init-param>
     </servlet>
-
+    <!--
+    <listener>
+        <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+    </listener>
+    -->
     <servlet-mapping>
         <servlet-name>dispatcher</servlet-name>
         <url-pattern>/</url-pattern>
