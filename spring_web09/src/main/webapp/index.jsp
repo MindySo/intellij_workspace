@@ -9,5 +9,8 @@
 </h1>
 <br/>
 <a href="hello-servlet">Hello Servlet</a>
+<a href="home">home</a>
+<a href="test">test</a>
+<a href="board/list">게시판</a>
 </body>
 </html>

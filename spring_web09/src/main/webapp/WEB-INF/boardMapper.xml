@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="kr.co.jhta.board">
+    <select id="selectAll" resultType="bdto">
+        SELECT * FROM board
+        ORDER BY bno DESC
+    </select>
+    <insert id="insertOne">
+        INSERT INTO board (bno, writer, title, contents, regdate, hits, status)
+        VALUES (BOARD_BNO_SEQ.nextval, #{writer}, #{title}, #{contents}, SYSDATE, 0, 1)
+    </insert>
+    <select id="selectOne" resultType="bdto">
+        SELECT * FROM board
+        WHERE bno = #{bno}
+    </select>
+    <delete id="delete">
+        DELETE FROM board
+        WHERE bno = #{bno}
+    </delete>
+
+</mapper>
