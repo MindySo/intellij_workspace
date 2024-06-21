@@ -2,30 +2,27 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="kr.co.jhta.board">
+<mapper namespace="kr.co.jhta.boardMySQL">
     <select id="selectAll" parameterType="hashmap" resultType="bdto">
         SELECT bno, writer, title, contents, regdate, hits, ip, status
-        FROM (SELECT ROWNUM rn, bno, writer, title, contents, regdate, hits, ip, status
-            FROM(SELECT bno, writer, title, contents, regdate, hits, ip, status
-                FROM BOARD
-                ORDER BY bno desc) t
-            WHERE ROWNUM &lt;= #{endNo})
-        WHERE rn &gt;= #{startNo}
+        FROM BOARD
+        ORDER BY bno DESC
+        LIMIT #{startNo}, 10
     </select>
     <insert id="insertOne">
-        INSERT INTO board (bno, writer, title, contents, regdate, hits, status)
-        VALUES (BOARD_BNO_SEQ.nextval, #{writer}, #{title}, #{contents}, SYSDATE, 0, 1)
+        INSERT INTO BOARD (bno, writer, title, contents, regdate, hits, status)
+        VALUES (null, #{writer}, #{title}, #{contents}, NOW(), 0, 1)
     </insert>
     <select id="selectOne" resultType="bdto">
-        SELECT * FROM board
+        SELECT * FROM BOARD
         WHERE bno = #{bno}
     </select>
     <delete id="delete">
-        DELETE FROM board
+        DELETE FROM BOARD
         WHERE bno = #{bno}
     </delete>
     <update id="update">
-        UPDATE board
+        UPDATE BOARD
         <set>
             <if test="title != null"> title = #{title}, </if>
             <if test="writer != null"> writer = #{writer}, </if>
@@ -34,6 +31,9 @@
         WHERE bno = #{bno}
     </update>
     <select id="getTotal" resultType="int">
-        SELECT COUNT(*) FROM board
+        SELECT COUNT(*) FROM BOARD
     </select>
+
+
+
 </mapper>

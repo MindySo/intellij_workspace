@@ -14,8 +14,19 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div class="container">
+    <div class="container" style="padding: 30px">
         <h3>list.jsp</h3>
+        <h4>총 게시물 수 : ${map.totalNumber}</h4>
+        <h4>페이지 당 게시물 수 : ${map.countPerPage}</h4>
+        <h4>총 페이지 수 : ${map.totalPages}</h4>
+        <h4>현재 페이지 시작번호 : ${map.startNo}</h4>
+        <h4>현재 페이지 끝번호 : ${map.endNo}</h4>
+        <h4>currentPage : ${map.currentPage}</h4>
+        <h4>startPageNo : ${map.startPageNo}</h4>
+        <h4>endPageNo : ${map.endPageNo}</h4>
+        <h4>prev : ${map.prev}</h4>
+        <h4>next : ${map.next}</h4>
+
 
         <a type="button" class="btn btn-primary" href="write">글쓰기</a>
 
@@ -29,7 +40,7 @@
                 <th>hits</th>
                 <th>status</th>
             </tr>
-            <c:forEach var="board" items="${boards}">
+            <c:forEach var="board" items="${list}">
                 <tr>
                     <td>${board.bno}</td>
                     <td>${board.writer}</td>
@@ -41,6 +52,21 @@
                 </tr>
             </c:forEach>
         </table>
+        <div style="text-align: center">
+            <nav aria-label="Page navigation example">
+                <ul class="pagination">
+                    <c:if test="${map.prev}">
+                        <li class="page-item"><a class="page-link" href="list?currentPage=${map.currentPage-1}"><<</a></li>
+                    </c:if>
+                    <c:forEach var="i" begin="${map.startPageNo}" end="${map.endPageNo}">
+                        <li class="page-item"><a class="page-link" href="list?currentPage=${i}">${i}</a></li>
+                    </c:forEach>
+<%--                    <c:if test="${map.next}">--%>
+                        <li class="page-item"><a class="page-link" href="list?currentPage=${map.currentPage+1}">>></a></li>
+<%--                    </c:if>--%>
+                </ul>
+            </nav>
+        </div>
     </div>
 </body>
 </html>

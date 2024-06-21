@@ -16,17 +16,24 @@
 
     <mvc:default-servlet-handler/>
 
-    <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+    <bean id="dataSourceOracle" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
         <property name="driverClassName" value="oracle.jdbc.driver.OracleDriver"/>
         <property name="url" value="jdbc:oracle:thin:@localhost:1521:xe"/>
         <property name="username" value="scott"/>
         <property name="password" value="tiger"/>
     </bean>
 
+    <bean id="dataSourceMySQL" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+        <property name="driverClassName" value="com.mysql.cj.jdbc.Driver"/>
+        <property name="url" value="jdbc:mysql://localhost:3306/xe"/>
+        <property name="username" value="scott"/>
+        <property name="password" value="tiger"/>
+    </bean>
+
     <bean id="factory" class="org.mybatis.spring.SqlSessionFactoryBean">
-        <property name="dataSource" ref="dataSource"/>
+        <property name="dataSource" ref="dataSourceMySQL"/>
         <property name="configLocation" value="/WEB-INF/sqlMapConfig.xml"/>
-        <property name="mapperLocations" value="/WEB-INF/boardMapper.xml"/>
+        <property name="mapperLocations" value="/WEB-INF/boardMapperMySQL.xml"/>
     </bean>
 
     <bean id="sqlSession" class="org.mybatis.spring.SqlSessionTemplate">

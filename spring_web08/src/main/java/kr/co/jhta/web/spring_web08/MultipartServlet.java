@@ -8,6 +8,7 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.Part;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.context.support.WebApplicationContextUtils;
 
 import java.io.File;
 import java.io.IOException;
@@ -21,10 +22,18 @@ public class MultipartServlet extends HttpServlet {
 
     final String UPLOAD_DIRECTORY = "/data";
 
+    // servlet 초기화
+    @Override
+    public void init() throws ServletException {
+        super.init();
+        //ServletContext에서 Spring ApplicationContext를 가져와 dao를 주입
+        this.dao = WebApplicationContextUtils.getRequiredWebApplicationContext(getServletContext()).getBean(FileDAO.class);
+    }
+
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
-        FileDAO dao = new FileDAO();
+//        FileDAO dao = new FileDAO();
 
         // /data 파일 저장 디렉토리
         String realpath = getServletContext().getRealPath(UPLOAD_DIRECTORY);

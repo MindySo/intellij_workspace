@@ -6,16 +6,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
+import java.lang.annotation.Annotation;
 import java.util.List;
 
-// @component : Spring이 관리해라(범용적)
-// @Repository : component와 기능은 같음, db와 직접 연결된경우
-// @("연결할 DB") : DB가 여러개일 경우 명시해줘야 함
-@Service("oracleService")
-public class BoardServiceImple implements BoardService {
-
+@Service("mysqlService")
+public class BoardMySQLService implements BoardService {
     @Autowired
-            @Qualifier("oracleDB")
+            @Qualifier("mysqlDB")
     CommonDAO dao;
 
     @Override

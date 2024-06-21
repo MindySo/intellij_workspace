@@ -30,14 +30,14 @@
                 <td>${board.title}</td>
             </tr>
             <tr>
-                <th colspan="4" style="height:400px">contents</th>
-                <td>${board.contents}</td>
+                <th style="height:400px">contents</th>
+                <td colspan="3">${board.contents}</td>
             </tr>
             <tr>
                 <td colspan="4">
-                    <a href="board/list" class="btn btn-primary">목록</a>
+                    <a href="list" class="btn btn-primary">목록</a>
                     <a href="modify?bno=${board.bno}" class="btn btn-secondary">수정</a>
-                    <a href="delete?bno=${board.bno}" class="btn btn-danger">삭제</a>
+                    <a href="delete/${board.bno}" class="btn btn-danger">삭제</a>
                 </td>
             </tr>
         </table>
