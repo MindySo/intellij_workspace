@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ex7.html</title>
+</head>
+<body>
+    <h3>ex7.html</h3>
+    <ul>
+        <li><a th:href="@{/hello}">basic url</a></li>
+
+        <!--url에 param 전달-->
+        <li><a th:href="@{/hello(p1=${param1}, p2=${param2})}">parameter url</a></li>
+        <li><a th:href="@{/hello/{p1}/{p2}(p1=${param1}, p2=${param2})}">path url</a></li>
+        <li><a th:href="@{/hello/{p1}(p1=${param1}, p2=${param2})}">path url</a></li>
+                                        <!--/hello/hello?p2=world-->
+    </ul>
+
+    <h3>문자 </h3>
+    <ul>
+        <li><span th:text="'hello'"></span></li>
+        <li><span th:text="hello"></span></li>
+        <li><span th:text="'hello world'"></span></li>
+        <li><span th:text="'hello ' + 'world'"></span></li>
+        <li><span th:text="'hello ' + ${param2}"></span></li>
+        <li><span th:text="|hello ${param2}|"></span></li>
+    </ul>
+
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ex8.html</title>
+</head>
+<body>
+    <h3>ex8.html</h3>
+    <ul>
+        <li>10 + 20 = <span th:text="10+20"></span></li>
+        <li>40 % 20 == 0 => <span th:text="40%20 == 0"></span></li>
+    </ul>
+    <h3>비교연산</h3>
+    <ul>
+        <li> 10 > 20 = <span th:text="10 >= 20"></span></li>
+        <li> 10 > 20 = <span th:text="10 &gt; 20"></span></li>
+        <li> 10 > 20 = <span th:text="10 gt 20"></span></li>
+        <!-- ge : great equal >= -->
+        <li> 10 > 20 = <span th:text="10 ge 20"></span></li>
+        <li> 10 > 20 = <span th:text="10 == 20"></span></li>
+        <li> 10 > 20 = <span th:text="10 != 20"></span></li>
+    </ul>
+    <ul>
+        <li>(100 % 2 == 0)? '짝수':'홀수' = <span th:text="(100 % 2 == 0)? '짝수':'홀수'"></span></li>
+    </ul>
+    <ul>
+        <li>${data}?:'No Data' = <span th:text="${data}?:'No Data'"></span></li>
+        <li>${nullvalue}?:'No Data' = <span th:text="${nullvalue}?:'No Data'"></span></li>
+    </ul>
+
+</body>
+</html>

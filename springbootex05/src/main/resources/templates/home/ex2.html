@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>ex2.html</title>
+</head>
+<body>
+    <h3>ex2.html</h3>
+    <h3 th:text="'Hello,' + ${name}"> </h3>
+
+    <ul>
+        <!--thymeleaf식 for문-->
+        <li th:each="dto : ${list}">
+            [[${dto}]]
+        </li>
+    </ul>
+
+</body>
+</html>

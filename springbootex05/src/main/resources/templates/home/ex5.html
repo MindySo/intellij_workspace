@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ex5.html</title>
+</head>
+<body>
+    <h3>ex5.html</h3>
+    <span th:text="${msg1}"></span>
+
+    <!--태그 살리기-->
+    <span th:utext="${msg1}"></span>
+    <br>
+
+    <span>[[${msg1}]]</span>
+    <span>[(${msg1})]</span>
+</body>
+</html>
