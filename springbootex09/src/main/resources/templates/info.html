@@ -14,6 +14,7 @@
 
     <table class="table table-striped">
         <tr>
+            <th>count</th>
             <th>no</th>
             <th>id</th>
             <th>pw</th>
@@ -21,19 +22,23 @@
             <th>gender</th>
             <th>motive</th>
             <th>email</th>
-            <th></th>
         </tr>
-        <tr th:each="member : ${list}">
-            <td><a href="/member/delete/">삭제</a> </td>
+        <tr th:each="member, status : ${list}">
+            <td>
+                <a th:href="@{/member/delete/{mno}(mno=${member.no})}" th:text="${status.count}"></a>
+            </td>
             <td th:text="${member.no}"></td>
+            <td th:text="${member.id}"></td>
             <td th:text="${member.pw}"></td>
-            <td th:text="${member.name}"></td>
+            <td>
+                <a th:href="@{/member/updateForm/{no}(no=${member.no})}" th:text="${member.name}"></a>
+            </td>
             <td th:text="${member.gender}"></td>
             <td th:text="${member.motive}"></td>
             <td th:text="${member.email}"></td>
         </tr>
         <tr>
-            <td colspan="7"><a href="/member/add">추가</a> </td>
+            <td colspan="8"><a href="/member/add">추가</a> </td>
         </tr>
     </table>
 </body>

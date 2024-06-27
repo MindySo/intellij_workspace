@@ -41,6 +41,19 @@ public class MainController {
         return "redirect:/member/info";
     }
 
+    @GetMapping("/updateForm/{num}")
+    public String update(@PathVariable int num, Model model) {
+        Member member = memberRepository.findById(num).get();
+        model.addAttribute("member", member);
+        return "updateForm";
+    }
+
+    @PostMapping("/updateOk")
+    public String update(@ModelAttribute Member member) {
+        memberRepository.save(member);
+        return "redirect:/member/info";
+    }
+
 
 
 }
