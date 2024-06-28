@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.util.List;
+import java.util.Optional;
 
 @Controller
 @RequestMapping("/info")
@@ -35,7 +36,7 @@ public class MainController {
     @GetMapping("/getOne/{empno}")
     public String deptInfo(@PathVariable("empno") Long empno, Model model) {
         Emp emp = empRepository.findByEmpno(empno);
-        Dept dept = DeptRepository.findByDeptno(emp.getDeptno());
+        Optional<Dept> dept = deptRepository.findById(emp.getDept().getDeptno());
         model.addAttribute("dept", dept);
         return "deptInfo";
     }

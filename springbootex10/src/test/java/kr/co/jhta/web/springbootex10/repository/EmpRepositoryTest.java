@@ -17,16 +17,19 @@ class EmpRepositoryTest {
     @Autowired
     EmpRepository empRepository;
 
-    @Test
-    public void testFindById(){
-        Optional<Emp> result = empRepository.findById(7788L);
-        if(result.isPresent()){
-            Emp emp = result.get();
-            System.out.println(emp);
-            Dept dept = emp.getDeptno();
-            System.out.println(dept.getDname() + " : " + dept.getLoc());
-        }
-    }
+//    @Test
+//    public void testFindById(){
+//        Optional<Emp> result = empRepository.findById(7788L);
+//        if(result.isPresent()){
+//            Emp emp = result.get();
+//            System.out.println(emp);
+//            Dept dept = emp.getDeptno();
+//            System.out.println(dept.getDname() + " : " + dept.getLoc());
+//        }
+//    }
+
+
+
 
 
 

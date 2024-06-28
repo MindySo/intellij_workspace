@@ -12,13 +12,13 @@
     <table class="table table">
         <tr>
             <th>deptno</th>
-            <td th:text="${dept.deptno}"></td>
+            <td th:text="${dept.get().getDeptno()}"></td>
         </tr> <tr>
             <th>dname</th>
-            <td th:text="${dept.dname}"></td>
+            <td th:text="${dept.get().getDname()}"></td>
         </tr> <tr>
             <th>loc</th>
-            <td th:text="${dept.loc}"></td>
+            <td th:text="${dept.get.getLoc()}"></td>
         </tr>
     </table>
 

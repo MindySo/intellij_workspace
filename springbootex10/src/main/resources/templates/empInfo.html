@@ -22,7 +22,7 @@
         </tr>
         <tr th:each="emp : ${list}">
             <td th:text="${emp.empno}"></td>
-            <td><a th:href="@{/info/empInfo/getOne/{empno}(empno=${emp.empno})}" th:text="${emp.ename}"></a></td>
+            <td><a th:href="@{/info/getOne/{empno}(empno=${emp.empno})}" th:text="${emp.ename}"></a></td>
             <td th:text="${emp.hiredate}"></td>
             <td th:text="${emp.comm}"></td>
             <td th:text="${emp.deptno}"></td>
