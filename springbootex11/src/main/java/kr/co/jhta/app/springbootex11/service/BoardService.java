@@ -2,13 +2,17 @@ package kr.co.jhta.app.springbootex11.service;
 
 import kr.co.jhta.app.springbootex11.domain.Board;
 import kr.co.jhta.app.springbootex11.dto.BoardDTO;
-
-import java.util.List;
+import org.springframework.data.domain.Page;
+import org.springframework.web.multipart.MultipartFile;
 
 public interface BoardService {
-    Long register(BoardDTO dto);
-    List<Board> getList();
-    Board get(Long bno);
-    void delete(Long bno);
-    void update(BoardDTO dto);
+    Long register(BoardDTO dto, MultipartFile[] files);
+
+    Page<Board> getList(int page, String keyword);
+
+    Board readOne(Long no);
+
+    void modify(BoardDTO dto);
+
+    void delete(Long no);
 }
