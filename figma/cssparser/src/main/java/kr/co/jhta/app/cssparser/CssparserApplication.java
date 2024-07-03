@@ -14,8 +14,8 @@ import java.util.Map;
 public class CssparserApplication {
 
     public static void main(String[] args) {
-        String dir = "D:\\aibayo\\figma\\html\\";
-        String htmlname = "admin_main";
+        String dir = "D:\\aibayo_figma\\html\\";
+        String htmlname = "admin_smj";
         String cssname = htmlname;
 
         try {
