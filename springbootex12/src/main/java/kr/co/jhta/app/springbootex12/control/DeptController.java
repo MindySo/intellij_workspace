@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+// Swagger를 통해서 REST API를 문서화하고 SWAGGER UI를 통해서 API를 쉽게 테스트할 수 있음
 @Tag(name = "예제 API", description = "SWAGGER 테스트용 API")
 
 @RestController

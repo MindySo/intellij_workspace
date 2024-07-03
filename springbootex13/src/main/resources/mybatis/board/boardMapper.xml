@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- namespace의 명이 DAO의 패키지명과 일치해야 -->
+<mapper namespace="kr.co.jhta.app.springbootex13.dao.BoardDAO">
+    <select id="getAll" parameterType="hashmap" resultType="BoardDTO">
+        select rn, bno, writer, title, contents, regdate, hits, ip, status from
+        (select rownum rn, bno, writer, title, contents, regdate, hits, ip, status from
+        (select bno, writer, title, contents, regdate, hits, ip, status
+        from board
+        order by bno desc)
+        where rownum &lt;= #{endNo})
+        where rn &gt;= #{startNo}
+    </select>
+
+    <select id="readOne" parameterType="Long" resultType="BoardDTO">
+        SELECT *
+        FROM board
+        WHERE bno = #{no}
+    </select>
+
+    <select id="getTotal" resultType="int">
+        SELECT count(*) FROM board
+    </select>
+
+    <select id="getTotalByKeyword" parameterType="String" resultType="int">
+        SELECT count(*) FROM board
+        WHERE writer LIKE '%'||#{keyword}||'%'
+        OR title LIKE '%'||#{keyword}||'%'
+        OR contents LIKE '%'||#{keyword}||'%'
+    </select>
+
+    <select id="selectSequence" resultType="int">
+        SELECT 시퀀스.NEXTVAL from dual
+    </select>
+
+    <select id="getAllByKeyword" parameterType="hashmap" resultType="BoardDTO">
+        select rn, bno, writer, title, contents, regdate, hits, ip, status from
+        (select rownum rn, bno, writer, title, contents, regdate, hits, ip, status from
+        (select bno, writer, title, contents, regdate, hits, ip, status
+        from board
+        WHERE writer LIKE '%'||#{keyword}||'%'
+        OR title LIKE '%'||#{keyword}||'%'
+        OR contents LIKE '%'||#{keyword}||'%'
+        order by bno desc)
+        where rownum &lt;= #{endNo})
+        where rn &gt;= #{startNo}
+    </select>
+
+    <insert id="addOne" parameterType="BoardDTO" useGeneratedKeys="true" keyProperty="bno">
+        INSERT INTO board (writer, title, contents, ip, regdate, status, hits)
+        VALUES(#{writer}, #{title}, #{contents}, #{ip}, SYSDATE, 1, 0)
+        <selectKey keyProperty="bno" resultType="Long" order="AFTER">
+            SELECT max(bno) bno FROM board
+        </selectKey>
+    </insert>
+
+    <update id="modifyOne" parameterType="BoardDTO">
+        UPDATE board
+        SET
+        writer = #{writer},
+        title = #{title},
+        contents = #{contents},
+        regdate = SYSDATE
+        WHERE bno = #{bno}
+    </update>
+
+    <delete id="deleteOne" parameterType="Long">
+        DELETE FROM board
+        WHERE bno = #{bno}
+    </delete>
+
+
+</mapper>

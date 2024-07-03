@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- namespace의 명이 DAO의 패키지명과 일치해야 -->
+<mapper namespace="kr.co.jhta.app.springbootex13.dao.BoardAttatchedDAO">
+
+    <insert id="addOne" parameterType="BoardAttatchedFileDTO">
+        INSERT INTO attatched_file (FILE_PATH, FILE_NAME, BOARDNO)
+        VALUES (#{filePath}, #{fileName}, #{boardNo})
+    </insert>
+
+    <select id="getList" parameterType="Long" resultType="BoardAttatchedFileDTO">
+        SELECT no as fileno, file_path as filePath, file_name as fileName, boardNo
+        FROM attatched_file
+        WHERE boardno = #{bno}
+    </select>
+
+</mapper>
