@@ -25,7 +25,7 @@
             <div class="request-toggle">
               <div class="overlap">
                 <div class="text-wrapper-2">의뢰서</div>
-                <img class="img" src="img/image.svg" />
+                <img class="img" src="img/material-symbols-arrow-drop-down-rounded.svg" />
               </div>
             </div>
           </div>
@@ -35,32 +35,41 @@
       <div class="body">
         <div class="title"><div class="text-wrapper-4">교사 관리</div></div>
         <div class="buttons">
-          <div class="dropdown-class">
-            <div class="selected-class">반 선택</div>
-            <img class="chevron-down" src="img/chevron-down.svg" />
-          </div>
-          <div class="button-invite"><div class="text-wrapper-5">초대하기</div></div>
+            <select class="dropdown-class">
+                <div class="selected-class"></div>
+                <!-- <img class="chevron-down" src="img/chevron-down.svg" /> -->
+                 <option value="반 선택">반 선택</option>
+                 <option value="1반">1반</option>
+                 <option value="1반">2반</option>
+                 <option value="1반">3반</option>
+                 <option value="1반">4반</option>
+            </select>
+            <a class="button-invite" href="/page_teacher_hover_sendinvite/index.html">
+                <div class="text-wrapper-5">초대하기</div>
+            </a>
         </div>
         <div class="tab-status">
-          <div class="view">
-            <div class="text-wrapper-6">승인 완료</div>
-            <div class="n"><div class="text-wrapper-7">11</div></div>
-            <div class="text-wrapper-5">명</div>
+            <a class="view-1" href="/page_teacher_done/index.html">
+              <div class="text-wrapper-6">승인 완료</div>
+              <div class="n"><div class="text-wrapper-7">11</div></div>
+              <div class="text-wrapper-5">명</div>
+            </a>
+            <a class="view-1" href="/page_teacher_wait/index.html">
+              <div class="text-wrapper-8">승인 대기</div>
+              <div class="n"><div class="text-wrapper-7">5</div></div>
+              <div class="text-wrapper-5">명</div>
+            </a>
+            <a class="view-2" href="/page_teacher_invited/index.html">
+              <div class="text-wrapper-9">초대 중</div>
+              <div class="n"><div class="text-wrapper-7">3</div></div>
+              <div class="text-wrapper-5">명</div>
+            </a>
           </div>
-          <div class="view">
-            <div class="text-wrapper-8">승인 대기</div>
-            <div class="n"><div class="text-wrapper-7">5</div></div>
-            <div class="text-wrapper-5">명</div>
-          </div>
-          <div class="view-2">
-            <div class="text-wrapper-9">초대 중</div>
-            <div class="n"><div class="text-wrapper-7">3</div></div>
-            <div class="text-wrapper-5">명</div>
-          </div>
-        </div>
         <div class="row-selected-teacher">
           <div class="text-selected-num">
-            <img class="icon" src="img/icon.png" />
+              <div class="icon">
+                <img src="/img/default.png" alt=""/>
+              </div>
             <div class="textarea">
               <div class="text-wrapper-10">초대 중인 교사</div>
               <div class="n-wrapper"><div class="n-2">3</div></div>
@@ -69,29 +78,34 @@
           </div>
           <div class="carousel">
             <div class="profile">
-              <img class="vector" src="img/vector-4.svg" />
+                <div class="img-2">
+                    <img src="/img/default.png" alt="">
+                </div>
               <div class="id"><div class="text-wrapper-11">testkim@testdomain.com</div></div>
-              <div class="button-admit"><div class="text-wrapper-12">승인</div></div>
             </div>
             <div class="profile">
-              <img class="vector" src="img/vector-3.svg" />
+                <div class="img-2">
+                    <img src="/img/default.png" alt="">
+                </div>
               <div class="id"><div class="text-wrapper-13">testpark@testdomain.com</div></div>
-              <div class="div-wrapper"><div class="text-wrapper-12">승인</div></div>
             </div>
             <div class="profile-2">
-              <img class="vector" src="img/vector-5.svg" />
+                <div class="img-2">
+                    <img src="/img/default.png" alt="">
+                </div>
               <div class="id-2"><div class="text-wrapper-14">testlee@testdomain.com</div></div>
-              <div class="button-admit-2"><div class="text-wrapper-12">승인</div></div>
             </div>
             <div class="profile-2">
-              <img class="vector" src="img/vector-2.svg" />
+                <div class="img-2">
+                    <img src="/img/default.png" alt="">
+                </div>
               <div class="id-2"><div class="text-wrapper-14">testlee@testdomain.com</div></div>
-              <div class="button-admit-2"><div class="text-wrapper-12">승인</div></div>
             </div>
             <div class="profile-2">
-              <img class="vector" src="img/vector.svg" />
+                <div class="img-2">
+                    <img src="/img/default.png" alt="">
+                </div>
               <div class="id-2"><div class="text-wrapper-14">testlee@testdomain.com</div></div>
-              <div class="button-admit-2"><div class="text-wrapper-12">승인</div></div>
             </div>
           </div>
         </div>

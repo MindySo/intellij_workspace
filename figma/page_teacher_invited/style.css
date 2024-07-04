@@ -1,12 +1,11 @@
 .container {
-    display: inline-flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    position: relative;
-    background-color: #ffffff;
-  }
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  position: relative;
+  background-color: #ffffff;
+}
   
   .container .header {
     position: relative;
@@ -138,13 +137,13 @@
   .container .body {
     display: flex;
     flex-direction: column;
-    height: 1631px;
+    /* width: 1920px;
+    height: 1631px; */
     align-items: flex-start;
     gap: 30px;
     padding: 30px 320px 50px;
     position: relative;
     align-self: stretch;
-    width: 100%;
     background-color: #ffffff;
   }
   
@@ -231,6 +230,7 @@
     position: relative;
     background-color: #ffe668;
     border-radius: 8px;
+    text-decoration-line : none
   }
   
   .container .text-wrapper-5 {
@@ -245,7 +245,7 @@
     white-space: nowrap;
     font-style: var(--small-text-font-style);
   }
-  
+
   .container .tab-status {
     display: flex;
     align-items: center;
@@ -254,14 +254,13 @@
     padding: 5px;
     position: relative;
     align-self: stretch;
-    width: 100%;
+    /* width: 100%; */
     flex: 0 0 auto;
     background-color: #f7f7f7;
     border-radius: 10px;
-    overflow-x: scroll;
   }
   
-  .container .view {
+  .container .view-1 {
     display: flex;
     height: 50px;
     align-items: center;
@@ -275,6 +274,7 @@
     border-radius: 10px;
     overflow: hidden;
     box-shadow: var(--button-shadow);
+    text-decoration-line : none
   }
   
   .container .text-wrapper-6 {
@@ -343,6 +343,7 @@
     border-radius: 10px;
     overflow: hidden;
     box-shadow: var(--button-shadow);
+    text-decoration-line : none
   }
   
   .container .text-wrapper-9 {
@@ -359,20 +360,20 @@
     font-style: var(--small-text-font-style);
   }
   
-  .container .row-selected-teacher {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 50px;
-    padding: 40px 92px;
-    position: relative;
-    align-self: stretch;
-    width: 100%;
-    flex: 0 0 auto;
-    background-color: #f7f7f7;
-    border-radius: 15px;
-    overflow: hidden;
-  }
+.container .row-selected-teacher {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 50px;
+  padding: 40px 92px;
+  position: relative;
+  align-self: stretch;
+  /* width: 100%; */
+  flex: 0 0 auto;
+  background-color: #f7f7f7;
+  border-radius: 15px;
+  overflow: hidden;
+}
   
   .container .text-selected-num {
     display: flex;
@@ -388,6 +389,21 @@
     position: relative;
     width: 40px;
     height: 40px;
+    border-radius: 70%;
+    background-size: cover;
+    background-position: 50% 50%;
+    overflow: hidden;
+  }
+  
+  .icon img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(50, 50);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin: auto;
   }
   
   .container .textarea {
@@ -455,11 +471,28 @@
     position: relative;
   }
   
-  .container .vector {
+  .container .img-2 {
     position: relative;
     width: 150px;
     height: 150px;
+    border-radius: 70%;
+    background-size: cover;
+    background-position: 50% 50%;
+    overflow: hidden;
   }
+  
+  .img-2 img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(50, 50);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin: auto;
+  }
+
+
   
   .container .id {
     display: flex;
