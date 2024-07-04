@@ -1,0 +1,360 @@
+.hover {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+    padding: 50px 60px;
+    position: relative;
+    background-color: #ffffff;
+  }
+  
+  .hover .title {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    position: relative;
+    align-self: stretch;
+    flex: 0 0 auto;
+  }
+  
+  .hover .textarea-wrapper {
+    display: inline-flex;
+    justify-content: center;
+    gap: 15px;
+    align-items: center;
+    position: relative;
+    align-self: stretch;
+    flex: 0 0 auto;
+  }
+  
+  .hover .textarea {
+    display: inline-flex;
+    gap: 2px;
+    flex: 0 0 auto;
+    align-items: center;
+    position: relative;
+  }
+  
+  .hover .text-wrapper {
+    position: relative;
+    width: fit-content;
+    margin-top: -1px;
+    font-family: "Inter-SemiBold", Helvetica;
+    font-weight: 600;
+    color: #000000;
+    font-size: 24px;
+    text-align: center;
+    letter-spacing: -0.48px;
+    line-height: 28.8px;
+    white-space: nowrap;
+  }
+  
+  .hover .button-x {
+    position: relative;
+    width: 35px;
+    height: 35px;
+  }
+  
+  .hover .inputbox {
+    gap: 20px;
+    padding: 30px 44px;
+    background-color: #f7f7f7;
+    border-radius: 15px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    align-self: stretch;
+    width: 100%;
+    flex: 0 0 auto;
+  }
+  
+  .hover .div {
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    align-self: stretch;
+    width: 100%;
+    flex: 0 0 auto;
+  }
+  
+  .hover .div-2 {
+    display: flex;
+    gap: 4px;
+    width: 100%;
+    align-items: center;
+    position: relative;
+    align-self: stretch;
+    flex: 0 0 auto;
+  }
+  
+  .hover .text-wrapper-2 {
+    margin-top: -1px;
+    font-family: "Inter-SemiBold", Helvetica;
+    font-weight: 600;
+    color: #000000;
+    font-size: 20px;
+    text-align: center;
+    line-height: 28px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    position: relative;
+    width: fit-content;
+    letter-spacing: 0;
+    white-space: nowrap;
+  }
+  
+  .hover .text-wrapper-3 {
+    margin-top: -1px;
+    font-family: "Inter-SemiBold", Helvetica;
+    font-weight: 600;
+    color: #cd6969;
+    font-size: 20px;
+    text-align: center;
+    line-height: 28px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    position: relative;
+    width: fit-content;
+    letter-spacing: 0;
+    white-space: nowrap;
+  }
+  
+  .hover .inputarea {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 14px;
+    padding: 20px 24px;
+    position: relative;
+    align-self: stretch;
+    width: 100%;
+    flex: 0 0 auto;
+    background-color: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  .hover .div-3 {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 10px 0px;
+    position: relative;
+    flex: 0 0 auto;
+  }
+  
+  .hover .text-wrapper-4 {
+    margin-top: -1px;
+    font-family: "Inter-SemiBold", Helvetica;
+    font-weight: 600;
+    color: #828282;
+    font-size: 18px;
+    text-align: center;
+    line-height: 25.2px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    position: relative;
+    width: fit-content;
+    letter-spacing: 0;
+    white-space: nowrap;
+  }
+  
+  .hover .div-4 {
+    display: flex;
+    width: 334px;
+    height: 50px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 20px;
+    position: relative;
+    background-color: #ffffff;
+    border-radius: 8px;
+    border: 1px solid;
+    border-color: #e0e0e0;
+  }
+  
+  .hover .selectedcategory {
+    position: relative;
+    width: 136px;
+    font-family: "Inter-Regular", Helvetica;
+    font-weight: 400;
+    color: #828282;
+    font-size: 17px;
+    letter-spacing: 0;
+    line-height: 24px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+  }
+  
+  .hover .chevron-down {
+    position: relative;
+    width: 24px;
+    height: 24px;
+  }
+  
+  .hover .div-5 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 10px 0px;
+    position: relative;
+    align-self: stretch;
+    width: 100%;
+    flex: 0 0 auto;
+  }
+  
+  .hover .default-wrapper {
+    display: flex;
+    height: 50px;
+    justify-content: flex-end;
+    gap: 10px;
+    padding: 0px 20px;
+    align-self: stretch;
+    width: 100%;
+    background-color: #ffffff;
+    border-radius: 8px;
+    border: 1px solid;
+    border-color: #e0e0e0;
+    align-items: center;
+    position: relative;
+  }
+  
+  .hover .default {
+    position: relative;
+    flex: 1;
+    font-family: "Inter-Regular", Helvetica;
+    font-weight: 400;
+    color: #828282;
+    font-size: 17px;
+    letter-spacing: 0;
+    line-height: 24px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+  }
+  
+  .hover .selected-class {
+    position: relative;
+    width: 136px;
+    font-family: "Inter-Medium", Helvetica;
+    font-weight: 500;
+    color: #000000;
+    font-size: 17px;
+    letter-spacing: 0;
+    line-height: 24px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+  }
+  
+  .hover .textarea-2 {
+    display: flex;
+    width: 334px;
+    height: 50px;
+    justify-content: flex-end;
+    gap: 10px;
+    padding: 0px 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    border: 1px solid;
+    border-color: #e0e0e0;
+    align-items: center;
+    position: relative;
+  }
+  
+  .hover .default-2 {
+    text-align: right;
+    position: relative;
+    flex: 1;
+    font-family: "Inter-Regular", Helvetica;
+    font-weight: 400;
+    color: #828282;
+    font-size: 17px;
+    letter-spacing: 0;
+    line-height: 24px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+  }
+  
+  .hover .text-wrapper-5 {
+    font-family: "Inter-Regular", Helvetica;
+    font-weight: 400;
+    color: #828282;
+    font-size: 17px;
+    text-align: right;
+    line-height: 24px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    position: relative;
+    width: fit-content;
+    letter-spacing: 0;
+    white-space: nowrap;
+  }
+  
+  .hover .button {
+    all: unset;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    position: relative;
+    align-self: stretch;
+    width: 100%;
+    flex: 0 0 auto;
+  }
+  
+  .hover .button-submit {
+    display: flex;
+    width: 180px;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 0px 16px;
+    position: relative;
+    background-color: #ffe668;
+    border-radius: 8px;
+  }
+  
+  .hover .text-wrapper-6 {
+    font-family: "Inter-Medium", Helvetica;
+    font-weight: 500;
+    color: #000000;
+    font-size: 20px;
+    line-height: 30px;
+    position: relative;
+    width: fit-content;
+    letter-spacing: 0;
+    white-space: nowrap;
+  }
