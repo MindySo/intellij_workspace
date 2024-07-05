@@ -1,6 +1,7 @@
 package kr.co.jhta.app.springbootex11.control;
 
 import jakarta.servlet.http.HttpServletRequest;
+import jakarta.validation.Valid;
 import kr.co.jhta.app.springbootex11.domain.Board;
 import kr.co.jhta.app.springbootex11.dto.BoardDTO;
 import kr.co.jhta.app.springbootex11.service.BoardService;
@@ -12,6 +13,7 @@ import org.springframework.boot.context.properties.bind.DefaultValue;
 import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -67,14 +69,20 @@ public class BoardController {
 
     @GetMapping("/write")
     public String write(Model model) {
+        model.addAttribute("boardDTO", new BoardDTO());
         return "board/writeForm";
     }
 
     @PostMapping("/write")
-    public String write(@ModelAttribute BoardDTO dto, HttpServletRequest request,
+    public String write(@Valid @ModelAttribute BoardDTO dto,
+                        BindingResult bindingResult, HttpServletRequest request,
                         @RequestParam("fileupload")MultipartFile[] files) {
         log.info("files: {}", files.length);
         log.info("전달받은 dto : " + dto.toString());
+        // 에러가 있는지
+        if(bindingResult.hasErrors()) {
+            return "board/writeForm";
+        }
         dto.setIp(request.getRemoteAddr());
         Long registered = boardService.register(dto, files);
         log.info("등록된게시물번호 {} ",  registered);

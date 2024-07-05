@@ -5,6 +5,7 @@
   gap: 10px;
   position: relative;
   background-color: #ffffff;
+  width: 100%;
 }
 
 .container .header {

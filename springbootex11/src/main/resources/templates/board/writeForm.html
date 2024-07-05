@@ -8,19 +8,28 @@
 </head>
 <body>
   <div class="container">
-    <form action="/board/write" method="post" enctype="multipart/form-data">
+    <form action="/board/write" method="post" th:object="${boardDTO}" enctype="multipart/form-data">
       <table class="table table-striped">
         <tr>
           <th>작성자</th>
-          <td><input type="text" name="writer" id="writer"></td>
+          <td>
+            <input type="text" name="writer" id="writer" th:field="*{writer}" class="form-control">
+            <div th:if="${#fields.hasErrors('writer')}" th:errors="*{writer}" class="text-danger"></div>
+          </td>
         </tr>
         <tr>
           <th>제목</th>
-          <td><input type="text" name="title" id="title"></td>
+          <td>
+            <input type="text" name="title" id="title" th:field="*{title}" class="form-control">
+            <div th:if="${#fields.hasErrors('title')}" th:errors="*{title}" class="text-danger"></div>
+          </td>
         </tr>
         <tr>
           <th>내용</th>
-          <td><textarea name="contents" id="contents" cols="30" rows="10"></textarea></td>
+          <td>
+            <textarea name="contents" id="contents" cols="30" rows="10" th:field="*{contents}" class="form-control"></textarea>
+            <div th:if="${#fields.hasErrors('contents')}" th:errors="*{contents}" class="text-danger"></div>
+          </td>
         </tr>
         <tr>
           <th>첨부파일</th>
@@ -36,7 +45,6 @@
     </form>
 
   </div>
-
 
 </body>
 </html>

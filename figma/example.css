@@ -53,3 +53,48 @@ text-decoration-line : none
     margin: auto;
 }
 
+
+/* 컨테이너 맞추기 */
+.container {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+    background-color: #ffffff;
+    width: 100%;
+}
+.container .body {
+    display: flex;
+    flex-direction: column;
+    /* width: 1920px;
+    height: 1631px; */
+    align-items: flex-start;
+    gap: 30px;
+    padding: 30px 320px 50px;
+    position: relative;
+    align-self: stretch;
+    background-color: #ffffff;
+}
+
+/* dropdown */
+.container .dropdown {
+    display: flex;
+    width: 200px;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    padding: 8px 16px;
+    position: relative;
+    background-color: #ffffff;
+    border-radius: 8px;
+    border: 1px solid;
+    border-color: #e0e0e0;
+  }
+
+  /* input text 테두리 없애기 */
+  .text-wrapper-5:focus {
+    outline: none;
+  }
+  
