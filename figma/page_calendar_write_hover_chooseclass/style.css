@@ -101,7 +101,6 @@
   }
   
   .hover .text-wrapper-2 {
-    margin-top: -1px;
     font-family: "Inter-SemiBold", Helvetica;
     font-weight: 600;
     text-align: center;
@@ -129,7 +128,6 @@
   .hover .text-wrapper-3 {
     position: relative;
     width: fit-content;
-    margin-top: -1px;
     font-family: "Inter-SemiBold", Helvetica;
     font-weight: 600;
     color: #b3b3b3;
@@ -245,6 +243,14 @@
     position: relative;
     background-color: #ffe668;
     border-radius: 8px;
+    border: none;
+    font-family: "Inter-Medium", Helvetica;
+    font-weight: 500;
+    line-height: 30px;
+    color: #000000;
+    font-size: 20px;
+    letter-spacing: 0;
+    white-space: nowrap;
   }
   
   .hover .text-wrapper-5 {

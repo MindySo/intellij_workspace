@@ -72,7 +72,6 @@
   .container .div {
     position: relative;
     width: fit-content;
-    margin-top: -1px;
     font-family: "Noto Sans-Medium", Helvetica;
     font-weight: 500;
     color: #000000;
@@ -156,6 +155,7 @@
     width: 100%;
     position: relative;
     flex: 0 0 auto;
+    padding-top: 10px;
   }
   
   .container .title {
@@ -171,7 +171,6 @@
   .container .text-wrapper-4 {
     position: relative;
     width: fit-content;
-    margin-top: -1px;
     font-family: var(--font-selected-menu-font-family);
     font-weight: var(--font-selected-menu-font-weight);
     color: #000000;
@@ -192,19 +191,6 @@
     padding: 0px 16px;
     position: relative;
     border-radius: 8px;
-  }
-  
-  .container .text-wrapper-5 {
-    position: relative;
-    width: fit-content;
-    font-family: var(--small-text-font-family);
-    font-weight: var(--small-text-font-weight);
-    color: #000000;
-    font-size: var(--small-text-font-size);
-    letter-spacing: var(--small-text-letter-spacing);
-    line-height: var(--small-text-line-height);
-    white-space: nowrap;
-    font-style: var(--small-text-font-style);
   }
   
   .container .selectarea {
@@ -235,7 +221,7 @@
     display: inline-flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 10px;
+    gap: 15px;
     position: relative;
     flex: 0 0 auto;
   }
@@ -243,15 +229,15 @@
   .container .div-4 {
     display: inline-flex;
     align-items: center;
-    gap: 10px;
+    gap: 18px;
     position: relative;
     flex: 0 0 auto;
+    padding-bottom: 5px;
   }
   
   .container .text-wrapper-6 {
     position: relative;
     width: fit-content;
-    margin-top: -1px;
     font-family: "Inter-Medium", Helvetica;
     font-weight: 500;
     color: #000000;
@@ -273,11 +259,12 @@
     height: 50px;
     align-items: center;
     justify-content: space-between;
-    padding: 10px 16px;
+    padding: 10px 20px;
     position: relative;
     background-color: #ffffff;
     border-radius: 10px;
     overflow: hidden;
+    border-color: #e0e0e0 !important;
   }
   
   .container .textarea {
@@ -287,8 +274,6 @@
     padding: 10px 0px;
     position: relative;
     flex: 0 0 auto;
-    margin-top: -7px;
-    margin-bottom: -7px;
   }
   
   .container .div-5 {
@@ -302,7 +287,6 @@
   .container .text-wrapper-7 {
     position: relative;
     width: fit-content;
-    margin-top: -1px;
     font-family: "Lato-Medium", Helvetica;
     font-weight: 500;
     color: #828282;
@@ -355,7 +339,7 @@
     flex: 0 0 auto;
   }
   
-  .container .buttonarea {
+  .container .keywordarea {
     display: flex;
     align-self: stretch;
     width: 100%;
@@ -365,7 +349,7 @@
     flex: 0 0 auto;
   }
   
-  .container .dropdown-category {
+  .container .keyword-input {
     display: flex;
     height: 50px;
     align-items: center;
@@ -377,11 +361,19 @@
     border-radius: 8px;
     border: 1px solid;
     border-color: #e0e0e0;
+    gap: 15px;
   }
   
-  .container .selected-class {
+  .container .vector-1 {
     position: relative;
-    width: 136px;
+    width: 25px;
+    height: 25px;
+  }
+
+  .container .keyword {
+    position: relative;
+    height: 100%;
+    width: 100%;
     font-family: "Inter-Regular", Helvetica;
     font-weight: 400;
     color: #828282;
@@ -393,8 +385,13 @@
     display: -webkit-box;
     -webkit-line-clamp: 1;
     -webkit-box-orient: vertical;
+    border: none;
   }
   
+  .keyword:focus {
+    outline: none;
+  }
+
   .container .frame-3 {
     display: flex;
     align-items: flex-end;
@@ -405,7 +402,7 @@
     flex: 0 0 auto;
   }
   
-  .container .selectedclass {
+  .container .selectedoption {
     display: inline-flex;
     align-items: center;
     gap: 20px;
@@ -413,11 +410,12 @@
     flex: 0 0 auto;
     border-radius: 10px;
     overflow: hidden;
+    padding-bottom: 5px;
   }
   
-  .container .class {
+  .container .optiondiv {
     display: inline-flex;
-    height: 35px;
+    height: 40px;
     align-items: center;
     gap: 20px;
     padding: 5px 13px;
@@ -440,7 +438,6 @@
     font-size: 16px;
     text-align: center;
     letter-spacing: 0;
-    line-height: 22.4px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -454,7 +451,7 @@
     width: 72px;
     align-items: center;
     justify-content: center;
-    gap: 7px;
+    gap: 10px;
     position: relative;
   }
   
@@ -467,7 +464,6 @@
   .container .text-wrapper-10 {
     position: relative;
     width: fit-content;
-    margin-top: -1px;
     font-family: var(--small-text-font-family);
     font-weight: var(--small-text-font-weight);
     color: #999999;
@@ -478,8 +474,8 @@
     font-style: var(--small-text-font-style);
   }
   
-  .container .div-wrapper {
-    width: 100px;
+  .container .search {
+    width: fit-content;
     height: 45px;
     background-color: #ffffff;
     border: 1px solid;
@@ -488,22 +484,28 @@
     align-items: center;
     justify-content: center;
     gap: 5px;
-    padding: 0px 16px;
+    padding: 0px 20px;
     position: relative;
     border-radius: 8px;
+    font-family: "Inter-Medium", Helvetica;
+    font-weight: 500;
+    color: #828282;
+    font-size: 18px;
+    letter-spacing: 0;
+    line-height: 30px;
+    white-space: nowrap;
   }
   
-  .container .text-wrapper-11 {
+  .container .text-search {
     position: relative;
     width: fit-content;
-    font-family: var(--small-text-font-family);
-    font-weight: var(--small-text-font-weight);
+    font-family: "Inter-Medium", Helvetica;
+    font-weight: 500;
     color: #828282;
-    font-size: var(--small-text-font-size);
-    letter-spacing: var(--small-text-letter-spacing);
-    line-height: var(--small-text-line-height);
+    font-size: 18px;
+    letter-spacing: 0;
+    line-height: 30px;
     white-space: nowrap;
-    font-style: var(--small-text-font-style);
   }
   
   .container .table {
@@ -524,7 +526,6 @@
     display: inline-flex;
     align-items: center;
     gap: 35px;
-    padding: 8px 0px;
     position: relative;
     flex: 0 0 auto;
   }
@@ -541,7 +542,6 @@
   .container .text-wrapper-12 {
     position: relative;
     width: fit-content;
-    margin-top: -1px;
     font-family: "Inter-SemiBold", Helvetica;
     font-weight: 600;
     color: #000000;
@@ -567,7 +567,6 @@
   .container .text-wrapper-13 {
     position: relative;
     width: fit-content;
-    margin-top: -1px;
     font-family: "Inter-SemiBold", Helvetica;
     font-weight: 600;
     color: #61a3f1;
@@ -583,7 +582,7 @@
     -webkit-box-orient: vertical;
   }
   
-  .container .dropdown-class {
+  .container .dropdown {
     display: flex;
     width: 130px;
     height: 50px;
@@ -597,7 +596,7 @@
     border-color: #e0e0e0;
   }
   
-  .container .selected-class-2 {
+  .dropdown option {
     position: relative;
     width: fit-content;
     font-family: var(--presets-body2-font-family);
@@ -619,19 +618,6 @@
     position: relative;
     width: 24px;
     height: 24px;
-  }
-  
-  .container .button-cancel {
-    display: flex;
-    width: 100px;
-    height: 45px;
-    align-items: center;
-    justify-content: center;
-    gap: 5px;
-    padding: 0px 16px;
-    position: relative;
-    background-color: #b3b3b3;
-    border-radius: 8px;
   }
   
   .container .text-wrapper-14 {
@@ -690,7 +676,6 @@
   .container .text-wrapper-15 {
     position: relative;
     width: 74px;
-    margin-top: -1px;
     font-family: "Inter-SemiBold", Helvetica;
     font-weight: 600;
     color: #000000;
@@ -708,7 +693,6 @@
     position: relative;
     align-self: stretch;
     width: 78px;
-    margin-top: -1px;
     font-family: "Inter-SemiBold", Helvetica;
     font-weight: 600;
     color: #000000;
@@ -727,7 +711,6 @@
     position: relative;
     align-self: stretch;
     width: 81px;
-    margin-top: -1px;
     font-family: "Inter-SemiBold", Helvetica;
     font-weight: 600;
     color: #000000;
@@ -745,7 +728,6 @@
   .container .text-wrapper-18 {
     position: relative;
     width: 70px;
-    margin-top: -1px;
     font-family: "Inter-SemiBold", Helvetica;
     font-weight: 600;
     color: #000000;
@@ -762,7 +744,6 @@
   .container .text-wrapper-19 {
     position: relative;
     width: 83px;
-    margin-top: -1px;
     font-family: "Inter-SemiBold", Helvetica;
     font-weight: 600;
     color: #000000;
@@ -779,7 +760,6 @@
   .container .text-wrapper-20 {
     position: relative;
     width: 230px;
-    margin-top: -1px;
     font-family: "Inter-SemiBold", Helvetica;
     font-weight: 600;
     color: #000000;
@@ -796,7 +776,6 @@
   .container .text-wrapper-21 {
     position: relative;
     width: 84px;
-    margin-top: -1px;
     font-family: "Inter-SemiBold", Helvetica;
     font-weight: 600;
     color: #000000;
@@ -814,7 +793,6 @@
   .container .text-wrapper-22 {
     position: relative;
     width: 38px;
-    margin-top: -1px;
     font-family: "Inter-SemiBold", Helvetica;
     font-weight: 600;
     color: #000000;
@@ -872,7 +850,6 @@
     position: relative;
     align-self: stretch;
     width: 78px;
-    margin-top: -1px;
     font-family: "Inter-Regular", Helvetica;
     font-weight: 400;
     color: #000000;
@@ -889,7 +866,6 @@
   .container .text-wrapper-25 {
     align-self: stretch;
     width: 81px;
-    margin-top: -1px;
     -webkit-line-clamp: 2;
     position: relative;
     font-family: "Inter-Regular", Helvetica;
@@ -1044,7 +1020,6 @@
   
   .container .text-wrapper-31 {
     position: absolute;
-    top: -1px;
     left: 0;
     font-family: "Noto Sans-Medium", Helvetica;
     font-weight: 500;
@@ -1056,7 +1031,6 @@
   
   .container .text-wrapper-32 {
     position: absolute;
-    top: -1px;
     left: 104px;
     font-family: "Noto Sans-Medium", Helvetica;
     font-weight: 500;
@@ -1068,7 +1042,6 @@
   
   .container .text-wrapper-33 {
     position: absolute;
-    top: -1px;
     left: 126px;
     font-family: "Noto Sans-Medium", Helvetica;
     font-weight: 500;

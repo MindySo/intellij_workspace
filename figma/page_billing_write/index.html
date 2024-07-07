@@ -2,7 +2,8 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <link rel="stylesheet" href="globals.css" />
+    <link rel="stylesheet" href="/css/globals.css" />
+    <link rel="stylesheet" href="/css/common_container.css" />
     <link rel="stylesheet" href="styleguide.css" />
     <link rel="stylesheet" href="style.css" />
   </head>
@@ -32,22 +33,24 @@
         </div>
         <div class="frame"><div class="text-wrapper-3">aibayo</div></div>
       </header>
-      <div class="body">
+      <form class="body">
         <div class="title">
-          <div class="title-2">
-            <img class="icon-back" src="img/icon-back.svg" />
-            <div class="div-2"><div class="text-wrapper-4">청구서 작성하기</div></div>
+          <div class="title-flow2">
+            <a class="icon-back" href="/page_teacher_done/index.html">
+              <img src="/img/back.png" alt=""/>
+            </a>
+            <div class="div-wrapper"><div class="text-wrapper-title">청구서 작성하기</div></div>
           </div>
-          <div class="button-send"><div class="text-wrapper-5">청구서 발송</div></div>
+          <input type="submit" class="button-submit" value="청구서 발송" >
         </div>
         <div class="inputbox">
           <div class="div-3">
             <div class="title-3">
               <div class="text-wrapper-6">청구 대상</div>
-              <div class="div-4">
-                <img class="img-2" src="img/icon-pencil.svg" />
+              <a class="button-cancel" href="/page_billing_manage_item_hover_add/index.html">
+                <img class="img-2" src="/img/pencil-white.png" />
                 <div class="text-wrapper-7">편집</div>
-              </div>
+              </a>
             </div>
             <div class="inputarea">
               <div class="div-2">
@@ -60,34 +63,31 @@
                 </div>
                 <div class="selectedchild">
                   <div class="child">
-                    <div class="div-5">
-                      <div class="img-3"></div>
+                      <div class="profile">
+                        <img src="/img/profile.png" alt=""/>
+                      </div>
                       <div class="textarea">
                         <div class="text-wrapper-10">김원아</div>
                         <div class="text-wrapper-10">(부모 : 김부모)</div>
-                      </div>
                     </div>
-                    <img class="button-x" src="img/button-x.svg" />
                   </div>
                   <div class="child">
-                    <div class="div-5">
-                      <div class="img-4"></div>
+                      <div class="profile">
+                        <img src="/img/profile.png" alt=""/>
+                      </div>
                       <div class="textarea">
                         <div class="text-wrapper-10">박원아</div>
                         <div class="text-wrapper-10">(부모 : 박부모)</div>
-                      </div>
                     </div>
-                    <img class="button-x" src="img/button-x-3.svg" />
                   </div>
                   <div class="child">
-                    <div class="div-5">
-                      <div class="img-5"></div>
+                      <div class="profile">
+                        <img src="/img/profile.png" alt=""/>
+                      </div>
                       <div class="textarea">
                         <div class="text-wrapper-10">이원아</div>
                         <div class="text-wrapper-10">(부모 : 이부모)</div>
-                      </div>
                     </div>
-                    <img class="button-x" src="img/button-x-4.svg" />
                   </div>
                 </div>
               </div>
@@ -101,15 +101,14 @@
             <div class="inputarea-2">
               <div class="div-6">
                 <div class="text-wrapper-11">항목</div>
-                <div class="div-7">
-                  <div class="selected-class">항목 선택</div>
-                  <img class="img-6" src="img/chevron-down-2.svg" />
-                </div>
+                <select class="selectoption">
+                  <option class="selected-class">항목 선택</option>
+                </select>
               </div>
               <div class="div-6">
                 <div class="text-wrapper-11">금액(원)</div>
                 <div class="input-charge">
-                  <div class="text-wrapper-12">300,000</div>
+                  <input type="text" class="inputtext" placeholder="-">
                   <div class="text-wrapper-13">원</div>
                 </div>
               </div>
@@ -123,34 +122,40 @@
             <div class="div-8">
               <div class="div-9">
                 <div class="inputarea-3">
-                  <div class="div-10">
-                    <div class="text-wrapper-11">항목</div>
-                    <div class="div-7">
-                      <div class="selected-class">항목 선택</div>
-                      <img class="img-6" src="img/chevron-down-4.svg" />
+                  <div class="inputarea-2-1">
+                    <div class="div-6">
+                      <div class="text-wrapper-11">항목</div>
+                      <select class="selectoption">
+                        <option class="selected-class">항목 선택</option>
+                      </select>
                     </div>
-                  </div>
-                  <div class="div-10">
-                    <div class="text-wrapper-11">대상</div>
-                    <div class="dropdown-child">
-                      <div class="selectedchild-2">김원아</div>
-                      <img class="img-6" src="img/chevron-down.svg" />
+                    <div class="div-6">
+                      <div class="text-wrapper-11">대상</div>
+                      <select class="selectoption-child">
+                        <option class="selectedchild-2">김원아</option>
+                      </select>
                     </div>
                   </div>
                 </div>
-                <div class="div-4"><div class="text-wrapper-14">+ 할인 추가</div></div>
+                <a class="button-cancel" href="">
+                  <div class="text-cancel">+ 할인 추가</div>
+                </a>
               </div>
               <div class="div-11">
                 <div class="div-12">
                   <div class="title">
                     <div class="div-5">
-                      <div class="img-7"></div>
+                      <div class="profile">
+                        <img src="/img/profile.png" alt=""/>
+                      </div>
                       <div class="textarea">
                         <div class="text-wrapper-15">김원아</div>
                         <div class="text-discount"><div class="text-wrapper-16">2024 여름방학 선등록 이벤트</div></div>
                       </div>
                     </div>
-                    <img class="button-x" src="img/button-x-2.svg" />
+                    <a class="button-x" href="">
+                      <img src="/img/x.png" alt=""/>
+                    </a>
                   </div>
                   <div class="charge">
                     <div class="div-13">
@@ -160,7 +165,7 @@
                         <div class="text-wrapper-16">원</div>
                       </div>
                     </div>
-                    <img class="img-2" src="img/icon-minus-2.svg" />
+                    <img class="img-2" src="/img/minus.png" />
                     <div class="div-13">
                       <div class="text-wrapper-17">할인</div>
                       <div class="div-14">
@@ -168,7 +173,7 @@
                         <div class="text-wrapper-16">원</div>
                       </div>
                     </div>
-                    <img class="icon-equal" src="img/icon-equal.svg" />
+                    <img class="icon-equal" src="/img/equal.png" />
                     <div class="text-finalcharge">
                       <div class="text-wrapper-18">총 청구 금액</div>
                       <div class="div-14">
@@ -181,13 +186,17 @@
                 <div class="div-12">
                   <div class="title">
                     <div class="div-5">
-                      <div class="img-8"></div>
+                      <div class="profile">
+                        <img src="/img/profile.png" alt=""/>
+                      </div>
                       <div class="textarea">
                         <div class="text-wrapper-15">박원아</div>
                         <div class="text-discount"><div class="text-wrapper-16">2024 재원 할인 이벤트</div></div>
                       </div>
                     </div>
-                    <img class="button-x" src="img/button-x-5.svg" />
+                    <a class="button-x" href="">
+                      <img src="/img/x.png" alt=""/>
+                    </a>
                   </div>
                   <div class="charge">
                     <div class="div-13">
@@ -197,7 +206,7 @@
                         <div class="text-wrapper-16">원</div>
                       </div>
                     </div>
-                    <img class="img-2" src="img/icon-minus.svg" />
+                    <img class="img-2" src="/img/minus.png" />
                     <div class="div-13">
                       <div class="text-wrapper-17">할인</div>
                       <div class="div-14">
@@ -205,7 +214,7 @@
                         <div class="text-wrapper-16">원</div>
                       </div>
                     </div>
-                    <img class="icon-equal" src="img/icon-equal-2.svg" />
+                    <img class="icon-equal" src="/img/equal.png" />
                     <div class="text-finalcharge">
                       <div class="text-wrapper-18">총 청구 금액</div>
                       <div class="div-14">
@@ -236,7 +245,9 @@
                       <img class="img-6" src="img/chevron-down-3.svg" />
                     </div>
                   </div>
-                  <div class="div-4"><div class="text-wrapper-14">+ 메모 추가</div></div>
+                  <a class="button-cancel" href="">
+                    <div class="text-cancel">+ 메모 추가</div>
+                  </a>
                 </div>
                 <div class="input-memo">
                   <div class="default">메모를 작성해 주세요.</div>
@@ -352,7 +363,7 @@
             </p>
           </div>
         </div>
-      </div>
+      </form>
       <footer class="footer">
         <div class="footer-inner">
           <div class="footer-text">

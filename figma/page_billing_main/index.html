@@ -2,7 +2,8 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <link rel="stylesheet" href="globals.css" />
+    <link rel="stylesheet" href="/css/globals.css" />
+    <link rel="stylesheet" href="/css/common_container.css" />
     <link rel="stylesheet" href="styleguide.css" />
     <link rel="stylesheet" href="style.css" />
   </head>
@@ -35,12 +36,15 @@
       <div class="body">
         <div class="div-2">
           <div class="title"><div class="text-wrapper-4">청구 및 수납</div></div>
-          <div class="button-send"><div class="text-wrapper-5">청구서 작성</div></div>
+          <a class="button-modify" href="/page_billing_write/index.html">
+            <img class="icon-pencil" src="/img/pencil.png" />
+            <div class="text-modify">청구서 작성</div>
+          </a>
         </div>
         <div class="selectarea">
           <div class="frame-2">
             <div class="div-3">
-              <div class="div-4"><div class="text-wrapper-6">기간 선택</div></div>
+              <div class="div-3"><div class="text-wrapper-6">기간 선택</div></div>
               <div class="div-4">
                 <div class="inputarea">
                   <div class="textarea">
@@ -57,7 +61,7 @@
                       <div class="text-wrapper-7">.</div>
                     </div>
                   </div>
-                  <img class="vector" src="img/vector.svg" />
+                  <img class="vector" src="/img/calendar.png" />
                 </div>
                 <div class="text-wrapper-8">-</div>
                 <div class="inputarea">
@@ -75,36 +79,49 @@
                       <div class="text-wrapper-7">.</div>
                     </div>
                   </div>
-                  <img class="vector" src="img/vector-2.svg" />
+                  <img class="vector" src="/img/calendar.png" />
                 </div>
               </div>
             </div>
             <div class="input-status">
               <div class="text-class"><div class="text-wrapper-6">검색어</div></div>
-              <div class="buttonarea">
-                <div class="dropdown-category"><div class="selected-class">검색어 입력</div></div>
+              <div class="keywordarea">
+                <div class="keyword-input">
+                  <img class="vector-1" src="/img/search.png" />
+                  <input type="text" class="keyword" placeholder="검색어 입력">
+                </div>
               </div>
             </div>
           </div>
-          <div class="frame-3">
+          <form class="frame-3" action="/page_billing_main/index.html">
             <div class="div-3">
               <div class="text-class"><div class="text-wrapper-6">수납 상태</div></div>
-              <div class="selectedclass">
-                <div class="class"><div class="text-wrapper-9">수납</div></div>
-                <div class="class"><div class="text-wrapper-9">미납</div></div>
-                <div class="class"><div class="text-wrapper-9">완료</div></div>
-                <div class="class"><div class="text-wrapper-9">발행취소</div></div>
-                <div class="class"><div class="text-wrapper-9">승인취소</div></div>
+              <div class="selectedoption">
+                <a class="optiondiv">
+                  <div class="text-wrapper-9">수납</div>
+                </a>
+                <a class="optiondiv">
+                  <div class="text-wrapper-9">미납</div>
+                </a>
+                <a class="optiondiv">
+                  <div class="text-wrapper-9">완료</div>
+                </a>
+                <a class="optiondiv">
+                  <div class="text-wrapper-9">발행취소</div>
+                </a>
+                <a class="optiondiv">
+                  <div class="text-wrapper-9">승인취소</div>
+                </a>
               </div>
             </div>
             <div class="div-4">
               <div class="view">
-                <img class="reset" src="img/reset.svg" />
+                <img class="reset" src="/img/reset.png" />
                 <div class="text-wrapper-10">초기화</div>
               </div>
-              <div class="div-wrapper"><div class="text-wrapper-11">조회하기</div></div>
+              <input type="submit" class="search" value="조회하기" />
             </div>
-          </div>
+          </form>
         </div>
         <div class="table">
           <div class="div-2">
@@ -116,12 +133,17 @@
                   <div class="text-wrapper-13">건</div>
                 </div>
               </div>
-              <div class="dropdown-class">
-                <div class="selected-class-2">25개씩</div>
-                <img class="chevron-down" src="img/chevron-down.svg" />
-              </div>
+              <select class="dropdown">
+                <option class="text-wrapper-5" value="">반 선택</option>
+                <option class="text-wrapper-5" value="">1반</option>
+                <option class="text-wrapper-5" value="">2반</option>
+                <option class="text-wrapper-5" value="">3반</option>
+                <option class="text-wrapper-5" value="">4반</option>
+              </select>
             </div>
-            <div class="button-cancel"><div class="text-wrapper-14">발행취소</div></div>
+            <a class="button-cancel" href="">
+              <div class="text-cancel">발행취소</div>
+            </a>
           </div>
           <div class="table-2">
             <div class="column">

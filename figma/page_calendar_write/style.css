@@ -173,70 +173,6 @@
   font-style: var(--font-selected-menu-font-style);
 }
 
-.container .buttons {
-  display: flex;
-  width: 1280px;
-  align-items: center;
-  justify-content: flex-end;
-  gap: 16px;
-  position: relative;
-  flex: 0 0 auto;
-}
-
-.container .button-cancel {
-  display: flex;
-  width: 146px;
-  height: 50px;
-  align-items: center;
-  justify-content: center;
-  gap: 5px;
-  padding: 0px 16px;
-  position: relative;
-  background-color: #bdbdbd;
-  border-radius: 8px;
-  text-decoration-line : none
-}
-
-.container .text-wrapper-5 {
-  position: relative;
-  width: fit-content;
-  font-family: var(--small-text-font-family);
-  font-weight: var(--small-text-font-weight);
-  color: #ffffff;
-  font-size: var(--small-text-font-size);
-  letter-spacing: var(--small-text-letter-spacing);
-  line-height: var(--small-text-line-height);
-  white-space: nowrap;
-  font-style: var(--small-text-font-style);
-}
-
-.container .button-submit {
-  display: flex;
-  width: 146px;
-  height: 50px;
-  align-items: center;
-  justify-content: center;
-  gap: 5px;
-  padding: 0px 16px;
-  position: relative;
-  background-color: #ffe668;
-  border-radius: 8px;
-  text-decoration-line : none
-}
-
-.container .text-wrapper-6 {
-  position: relative;
-  width: fit-content;
-  font-family: var(--small-text-font-family);
-  font-weight: var(--small-text-font-weight);
-  color: #000000;
-  font-size: var(--small-text-font-size);
-  letter-spacing: var(--small-text-letter-spacing);
-  line-height: var(--small-text-line-height);
-  white-space: nowrap;
-  font-style: var(--small-text-font-style);
-}
-
 .container .calendar {
   display: flex;
   flex-direction: column;
@@ -268,26 +204,8 @@
   position: relative;
 }
 
-.container .text-wrapper-8 {
-  position: relative;
-  width: fit-content;
-  font-family: "Inter-Medium", Helvetica;
-  font-weight: 600;
-  color: #000000;
-  font-size: 20px;
-  text-align: center;
-  letter-spacing: 0;
-  line-height: 28px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-line-clamp: 1;
-  -webkit-box-orient: vertical;
-}
-
 .container .inputarea {
-  width: 278px;
+  width: fit-content;
   height: 65px;
   align-items: center;
   justify-content: space-between;
@@ -349,7 +267,7 @@
   width: 100%;
 }
 
-.container .text-class {
+.container .title-class {
   display: inline-flex;
   align-items: center;
   gap: 5px;
@@ -385,67 +303,6 @@
   -webkit-box-orient: vertical;
 }
 
-.container .button-modify {
-  display: flex;
-  width: 154px;
-  height: 50px;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  padding: 0px 16px;
-  position: relative;
-  background-color: #ffe668;
-  border-radius: 8px;
-  text-decoration-line : none
-}
-
-.container .icon-pencil {
-  position: relative;
-  width: 15px;
-  height: 15px;
-}
-
-.container .text-wrapper-11 {
-  position: relative;
-  width: fit-content;
-  font-family: "Inter-Medium", Helvetica;
-  font-weight: 500;
-  color: #000000;
-  font-size: 20px;
-  letter-spacing: 0;
-  line-height: 30px;
-  white-space: nowrap;
-}
-
-.container .selectedclass {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 20px 20px;
-  padding: 20px 16px;
-  position: relative;
-  align-self: stretch;
-  width: 100%;
-  flex: 0 0 auto;
-  background-color: #ffffff;
-  border-radius: 10px;
-  overflow: hidden;
-}
-
-.container .class {
-  justify-content: space-between;
-  border-color: #cccccc;
-  box-shadow: 0px 3px 6px #0000001a;
-  display: flex;
-  width: 185px;
-  height: 50px;
-  align-items: center;
-  padding: 5px 25px;
-  position: relative;
-  border-radius: 12px;
-  overflow: hidden;
-  border: 0.5px solid;
-}
 .container .text-wrapper-7 {
   position: relative;
   width: fit-content;
@@ -474,15 +331,23 @@
   height: 65px;
   align-items: center;
   gap: 10px;
-  padding: 10px 17px;
   align-self: stretch;
   width: 100%;
+  padding: 10px 20px;
   display: flex;
   position: relative;
   background-color: #ffffff;
   border-radius: 10px;
   overflow: hidden;
+  border: none;
+  height: 100%;
+  font-size: 20px;
 }
+
+.default-wrapper:focus {
+  outline: none;
+}
+
 
 .container .default {
   position: relative;
@@ -504,7 +369,7 @@
 
 .container .inputarea-2 {
   flex-direction: column;
-  height: 223px;
+  height: fit-content;
   align-items: flex-start;
   justify-content: space-between;
   padding: 10px 16px;
@@ -518,23 +383,31 @@
 }
 
 .container .default-2 {
-  margin-top: -1px;
+  padding: 10px 0px;
+  display: inline-flex;
+  align-items: center;
   position: relative;
-  width: fit-content;
+  flex: 0 0 auto;
+  border: none;
+  width: 100%;
+  height: 150px;
+  font-size: 20px;
   font-family: "Inter-Medium", Helvetica;
   font-weight: 500;
   color: #828282;
   font-size: 20px;
-  text-align: center;
-  letter-spacing: 0;
-  line-height: 28px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-line-clamp: 1;
-  -webkit-box-orient: vertical;
-}
+  resize: none;
+  -ms-overflow-style: none;
+  padding-bottom: 15px;
+  }
+
+  .default-2:focus {
+    outline: none;
+  }
+
+ .default-2::-webkit-scrollbar{
+    display:none;
+  }
 
 .container .grammar {
   display: flex;
@@ -552,9 +425,9 @@
 
 .container .class-2 {
   gap: 5px;
-  border-color: #acacaa;
+  border-color: #acacaa !important;
   display: flex;
-  width: 185px;
+  width: fit-content;
   height: 50px;
   align-items: center;
   padding: 5px 25px;
@@ -586,7 +459,6 @@
   height: 80px;
   align-items: center;
   justify-content: center;
-  gap: 7px;
   padding: 10px 16px;
   align-self: stretch;
   width: 100%;
@@ -595,6 +467,14 @@
   background-color: #ffffff;
   border-radius: 10px;
   overflow: hidden;
+}
+
+.container .input-loc {
+  height: fit-content;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  display: flex;
 }
 
 .container .button-x {
@@ -616,29 +496,6 @@
   height: 100%;
   object-fit: cover;
   margin: auto;
-}
-
-.container .text-wrapper-13 {
-  position: relative;
-  width: 14px;
-  height: 14px;
-  margin-top: -2.5px;
-  margin-bottom: -0.5px;
-  margin-left: -1.5px;
-  margin-right: -1.5px;
-  font-family: "Inter-Regular", Helvetica;
-  font-weight: 400;
-  color: #ffffff;
-  font-size: 20px;
-  text-align: center;
-  letter-spacing: 0;
-  line-height: 12.2px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-line-clamp: 1;
-  -webkit-box-orient: vertical;
 }
 
 .container .footer {
