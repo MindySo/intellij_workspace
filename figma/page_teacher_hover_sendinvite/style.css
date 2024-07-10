@@ -1,4 +1,4 @@
-.hover {
+.modal-dialog {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -8,7 +8,7 @@
     background-color: #ffffff;
   }
   
-  .hover .title {
+  .modal-dialog .title {
     display: flex;
     justify-content: space-between;
     padding: 0px 0px 0px 30px;
@@ -19,7 +19,7 @@
     flex: 0 0 auto;
   }
   
-  .hover .textarea-wrapper {
+  .modal-dialog .textarea-wrapper {
     display: inline-flex;
     justify-content: center;
     gap: 15px;
@@ -29,7 +29,7 @@
     flex: 0 0 auto;
   }
   
-  .hover .textarea {
+  .modal-dialog .textarea {
     display: inline-flex;
     align-items: center;
     gap: 2px;
@@ -37,7 +37,7 @@
     flex: 0 0 auto;
   }
   
-  .hover .text-wrapper {
+  .modal-dialog .text-wrapper {
     position: relative;
     width: fit-content;
     margin-top: -1px;
@@ -51,13 +51,13 @@
     white-space: nowrap;
   }
   
-  .hover .button-x {
+  .modal-dialog .button-x {
     position: relative;
     width: 35px;
     height: 35px;
   }
   
-  .hover .row-input {
+  .modal-dialog .row-input {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -72,7 +72,7 @@
     overflow: hidden;
   }
   
-  .hover .div {
+  .modal-dialog .div {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -83,7 +83,7 @@
     flex: 0 0 auto;
   }
   
-  .hover .div-2 {
+  .modal-dialog .div-2 {
     display: inline-flex;
     align-items: center;
     gap: 10px;
@@ -91,13 +91,13 @@
     flex: 0 0 auto;
   }
   
-  .hover .icon {
+  .modal-dialog .icon {
     position: relative;
     width: 30px;
     height: 30px;
   }
   
-  .hover .text-wrapper-2 {
+  .modal-dialog .text-wrapper-2 {
     position: relative;
     width: fit-content;
     font-family: "Inter-Medium", Helvetica;
@@ -115,7 +115,7 @@
     -webkit-box-orient: vertical;
   }
   
-  .hover .inputarea {
+  .modal-dialog .inputarea {
     display: flex;
     align-items: center;
     gap: 10px;
@@ -129,7 +129,7 @@
     overflow: hidden;
   }
   
-  .hover .default {
+  .modal-dialog .default {
     position: relative;
     width: fit-content;
     margin-top: -1px;
@@ -148,7 +148,7 @@
     -webkit-box-orient: vertical;
   }
   
-  .hover .button {
+  .modal-dialog .button {
     all: unset;
     box-sizing: border-box;
     display: flex;
@@ -161,7 +161,7 @@
     flex: 0 0 auto;
   }
   
-  .hover .button-send {
+  .modal-dialog .button-send {
     display: flex;
     width: 180px;
     height: 50px;
@@ -172,9 +172,16 @@
     position: relative;
     background-color: #ffe668;
     border-radius: 8px;
+    font-family: "Inter-Medium", Helvetica;
+    font-weight: 500;
+    color: #000000;
+    font-size: 20px;
+    letter-spacing: 0;
+    line-height: 30px;
+    white-space: nowrap;
   }
   
-  .hover .text-wrapper-3 {
+  /* .modal-dialog .text-wrapper-3 {
     position: relative;
     width: fit-content;
     font-family: "Inter-Medium", Helvetica;
@@ -184,4 +191,4 @@
     letter-spacing: 0;
     line-height: 30px;
     white-space: nowrap;
-  }
+  } */
